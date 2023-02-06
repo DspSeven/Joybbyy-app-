@@ -1,53 +1,30 @@
-.fg-bg-container {
-  background-color: transparent;
-}
-.success-view-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+.home-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
   background-size: cover;
-  height: 250px;
-  width: 350px;
-  margin-left: 15px;
-  border-radius: 7px;
+  height: 100vh;
+}
+.home-heading {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 25px;
+  text-align: center;
+}
+.bg-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 150px;
+  align-items: center;
 }
-.sv-img-con {
-  border-radius: 40px;
-  margin-left: 10px;
-}
-.sv-name-con {
-  color: #4f46e5;
-  font-size: 25px;
-  margin-left: 10px;
-  font-size: 'Roboto';
-}
-.sv-para-con {
-  font-size: 20px;
-  margin-left: 10px;
-}
-.horizontal-line {
-  width: 85%;
-}
-.emp-heading {
+.para-heading {
   color: #ffffff;
   font-size: 25px;
+  font-weight: 25px;
   text-align: center;
 }
-.label-heading {
+.home-button {
+  border-radius: 7px;
+  border-width: 0px;
+  padding: 7px;
   color: #ffffff;
-  font-size: 20px;
-  margin-left: 15px;
-}
-.salary-heading {
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-}
-.radio-heading {
-  color: #ffffff;
-  font-size: 25px;
-  margin-left: 15px;
+  background-color: #6366f1;
 }
