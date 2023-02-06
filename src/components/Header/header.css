@@ -1,53 +1,37 @@
-.fg-bg-container {
-  background-color: transparent;
-}
-.success-view-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
-  background-size: cover;
-  height: 250px;
-  width: 350px;
-  margin-left: 15px;
-  border-radius: 7px;
+.unordered-list {
+  background-color: #121212;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.wl-css {
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 150px;
+  align-items: center;
 }
-.sv-img-con {
-  border-radius: 40px;
-  margin-left: 10px;
+.hj-css {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sv-name-con {
-  color: #4f46e5;
-  font-size: 25px;
-  margin-left: 10px;
-  font-size: 'Roboto';
-}
-.sv-para-con {
-  font-size: 20px;
-  margin-left: 10px;
-}
-.horizontal-line {
-  width: 85%;
-}
-.emp-heading {
+.home-heading {
   color: #ffffff;
   font-size: 25px;
-  text-align: center;
+  padding-right: 25px;
 }
-.label-heading {
-  color: #ffffff;
-  font-size: 20px;
-  margin-left: 15px;
-}
-.salary-heading {
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-}
-.radio-heading {
+.job-heading {
   color: #ffffff;
   font-size: 25px;
-  margin-left: 15px;
+}
+.header-button {
+  color: #ffffff;
+  background-color: #4f46e5;
+  padding: 7px;
+  margin-right: 15px;
+  border-radius: 7px;
+  border-width: 0px;
 }
