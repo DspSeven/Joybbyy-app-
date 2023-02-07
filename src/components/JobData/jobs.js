@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import {AiFillStar} from 'react-icons/ai'
 import {ImLocation2} from 'react-icons/im'
 import {BsFillPersonFill} from 'react-icons/bs'
+import './jobs.css'
 
 const JobData = props => {
   const {jobDetails} = props
@@ -16,7 +17,7 @@ const JobData = props => {
     title,
   } = jobDetails
   return (
-    <li>
+    <li className="jobs-container">
       <Link to={`jobs/${id}`}>
         <div>
           <img src={companyLogoUrl} alt="company logo" />
