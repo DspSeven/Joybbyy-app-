@@ -13,3 +13,28 @@
   justify-content: center;
   align-items: center;
 }
+.search-input {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 5px;
+  width: 250px;
+}
+.search-icon {
+  background-color: transparent;
+  color: #ffffff;
+  align-self: center;
+  font-size: 35px;
+  background-color: #475569;
+}
+.search-container {
+  display: flex;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  width: 20%;
+}
+.job-ul-list {
+  display: flex;
+  flex-wrap: wrap;
+}
