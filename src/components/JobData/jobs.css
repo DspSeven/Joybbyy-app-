@@ -1,3 +1,101 @@
 .jobs-container {
-  background-color: #272727;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.job-bg-container {
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+.company-logo-img {
+  height: 60px;
+  width: 60px;
+  align-self: center;
+  margin-bottom: 25px;
+}
+.sec-con {
+  background-color: #202020;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.netflix-container {
+  display: flex;
+  padding-left: 50px;
+  padding-top: 35px;
+}
+.netflix-show {
+  display: flex;
+  flex-direction: column;
+}
+.netflix-heading {
+  color: #ffffff;
+  font-size: 25px;
+  margin-left: 25px;
+  text-decoration-line: none;
+  line-height: 3px;
+}
+.star-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 3px;
+}
+.star-icon {
+  color: yellow;
+  margin-left: 25px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+.star-rating {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.netflix-address {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.location {
+  display: flex;
+  justify-content: space-between;
+}
+.location-1 {
+  align-self: center;
+  font-size: 30px;
+  padding-right: 5px;
+}
+.location-2 {
+  color: #ffffff;
+  font-size: 20px;
+}
+.person {
+  display: flex;
+  justify-content: space-between;
+}
+.person-1 {
+  align-self: center;
+  font-size: 30px;
+  padding-right: 5px;
+}
+.person-2 {
+  color: #ffffff;
+  font-size: 20px;
+}
+.horizontal-line {
+  width: 93%;
+}
+.netflix-story {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.ns-1 {
+  margin-left: 35px;
+}
+.ns-2 {
+  margin-left: 35px;
+  text-align: center;
+  line-height: 25px;
 }
