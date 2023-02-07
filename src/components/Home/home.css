@@ -8,12 +8,14 @@
   font-size: 25px;
   font-weight: 25px;
   text-align: center;
+  line-height: 5px;
 }
 .bg-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 150px;
 }
 .para-heading {
   color: #ffffff;
