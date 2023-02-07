@@ -18,34 +18,40 @@ const JobData = props => {
   } = jobDetails
   return (
     <li className="jobs-container">
-      <Link to={`jobs/${id}`}>
-        <div>
-          <img src={companyLogoUrl} alt="company logo" />
-          <div>
-            <h1>{title}</h1>
-            <div>
-              <AiFillStar />
-              <p>{rating}</p>
+      <Link to={`jobs/${id}`} className="job-bg-container">
+        <div className="sec-con">
+          <div className="netflix-container">
+            <img
+              src={companyLogoUrl}
+              alt="company logo"
+              className="company-logo-img"
+            />
+            <div className="netflix-show">
+              <h1 className="netflix-heading">{title}</h1>
+              <div className="star-container">
+                <AiFillStar className="star-icon" />
+                <p className="star-rating">{rating}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div>
-            <ImLocation2 />
-            <p>{location}</p>
+          <div className="netflix-address">
+            <div className="location">
+              <ImLocation2 className="location-1" />
+              <p className="location-2">{location}</p>
+            </div>
+            <div className="person">
+              <BsFillPersonFill className="person-1" />
+              <p className="person-2">{employmentType}</p>
+            </div>
+            <div>
+              <p className="person-2">{packagePerAnnum}</p>
+            </div>
           </div>
-          <div>
-            <BsFillPersonFill />
-            <p>{employmentType}</p>
+          <hr className="horizontal-line" />
+          <div className="netflix-story">
+            <h1 className="ns-1">Description</h1>
+            <p className="ns-2">{jobDescription}</p>
           </div>
-          <div>
-            <p>{packagePerAnnum}</p>
-          </div>
-        </div>
-        <hr />
-        <div>
-          <h1>Description</h1>
-          <p>{jobDescription}</p>
         </div>
       </Link>
     </li>
