@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
+import './filter.css'
 
 const employmentTypesList = [
   {
@@ -90,10 +91,10 @@ class FilterGroup extends Component {
     const {profileInfo} = this.state
     const {name, profileImageUrl, shortBio} = profileInfo
     return (
-      <div>
-        <img src={profileImageUrl} alt={name} />
-        <h1>{name}</h1>
-        <p>{shortBio}</p>
+      <div className="success-view-container">
+        <img src={profileImageUrl} alt={name} className="sv-img-con" />
+        <h1 className="sv-name-con">Devisriprasad Kallepalli</h1>
+        <p className="sv-para-con">{shortBio}</p>
       </div>
     )
   }
@@ -159,8 +160,8 @@ class FilterGroup extends Component {
     return (
       <div>
         {this.startSwitch()}
-        <hr />
-        <h1>Type of Employment</h1>
+        <hr className="horizontal-line" />
+        <h1 className="emp-heading">Type of Employment</h1>
         <ul>
           {employmentTypesList.map(emp => (
             <li>
@@ -170,12 +171,14 @@ class FilterGroup extends Component {
                 value={emp.employmentTypeId}
                 onClick={this.sendLabels}
               />
-              <label htmlFor={emp.employmentTypeId}>{emp.label}</label>
+              <label htmlFor={emp.employmentTypeId} className="label-heading">
+                {emp.label}
+              </label>
             </li>
           ))}
         </ul>
         <hr />
-        <h1>Salary Range</h1>
+        <h1 className="salary-heading">Salary Range</h1>
         <ul>
           {salaryRangesList.map(salary => (
             <li>
@@ -186,7 +189,11 @@ class FilterGroup extends Component {
                 value={salary.salaryRangeId}
                 onClick={this.senSalaries}
               />
-              <label htmlFor={salary.salaryRangeId} name="label">
+              <label
+                htmlFor={salary.salaryRangeId}
+                name="label"
+                className="radio-heading"
+              >
                 {salary.label}
               </label>
             </li>
