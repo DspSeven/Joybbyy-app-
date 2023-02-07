@@ -52,26 +52,43 @@ class Login extends Component {
     const {errorMsg, errorStatus} = this.state
     console.log(errorMsg)
     return (
-      <div>
-        <div>
+      <div className="login-container">
+        <div className="user-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
             alt="website logo"
+            className="website-logo-image"
           />
           <form onSubmit={this.getJob}>
             <div>
-              <label htmlFor="userName">USERNAME</label>
-              <input id="userName" type="text" onChange={this.enterUsername} />
+              <label htmlFor="userName" className="username-container">
+                USERNAME
+              </label>
+              <br />
+              <input
+                id="userName"
+                type="text"
+                onChange={this.enterUsername}
+                placeholder="Username"
+                className="username-css"
+              />
             </div>
             <div>
-              <label htmlFor="passWord">PASSWORD</label>
+              <label htmlFor="passWord" className="password-container">
+                PASSWORD
+              </label>
+              <br />
               <input
                 id="passWord"
                 type="password"
                 onChange={this.enterPassword}
+                placeholder="Password"
+                className="username-css"
               />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className="login-button">
+              Login
+            </button>
             {errorStatus && <p>{errorMsg}</p>}
           </form>
         </div>
