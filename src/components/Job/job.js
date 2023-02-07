@@ -5,7 +5,7 @@ import {BiSearchAlt2} from 'react-icons/bi'
 import FilterGroup from '../FilterGroup/filter'
 import JobData from '../JobData/jobs'
 import Header from '../Header/header'
-// import './job.css'
+import './job.css'
 
 const jobConstants = {
   initial: 'INITIAL',
@@ -147,7 +147,7 @@ class Job extends Component {
   renderData = () => {
     const {employmentList} = this.state
     return (
-      <ul>
+      <ul className="job-ul-list">
         {employmentList.map(data => (
           <JobData jobDetails={data} key={data.id} />
         ))}
@@ -210,19 +210,26 @@ class Job extends Component {
   render() {
     const {search} = this.state
     return (
-      <div>
+      <div className="job-bg-container">
         <Header />
-        <FilterGroup sendLabel={this.sendLabel} sendSalary={this.sendSalary} />
-        <div>
-          <div>
-            <input
-              type="search"
-              onChange={this.enterSearchKey}
-              value={search}
-            />
-            <BiSearchAlt2 />
+        <div className="bg-con">
+          <FilterGroup
+            sendLabel={this.sendLabel}
+            sendSalary={this.sendSalary}
+          />
+          <div className="another-bg-con">
+            <div className="search-container">
+              <input
+                type="search"
+                onChange={this.enterSearchKey}
+                value={search}
+                className="search-input"
+                placeholder="Search"
+              />
+              <BiSearchAlt2 className="search-icon" />
+            </div>
+            <div>{this.startSwitch()}</div>
           </div>
-          <div>{this.startSwitch()}</div>
         </div>
       </div>
     )
