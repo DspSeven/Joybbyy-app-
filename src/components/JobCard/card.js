@@ -9,6 +9,7 @@ import {Redirect} from 'react-router-dom'
 import SimilarJob from '../SimilarJob/sim'
 import NotFound from '../NotFound/notFound'
 import Header from '../Header/header'
+import './card.css'
 
 const jobConstants = {
   initial: 'INITIAL',
@@ -134,56 +135,66 @@ class JobCard extends Component {
     } = jobSource
     const {description, imageUrl} = lifeAtCompany
     return (
-      <div>
-        <div>
-          <div>
-            <img src={companyLogoUrl} alt="company_logo_url" />
+      <div className="job-card-bg-con">
+        <div className="bg-sub-container">
+          <div className="facebook-container">
+            <img
+              src={companyLogoUrl}
+              alt="company_logo_url"
+              className="facebook-logo"
+            />
             <div>
-              <h1>{title}</h1>
-              <div>
-                <AiTwotoneStar />
-                <p>{rating}</p>
+              <h1 className="facebook-heading">{title}</h1>
+              <div className="facebook-rating">
+                <AiTwotoneStar className="fr-1" />
+                <p className="fr-2">{rating}</p>
               </div>
             </div>
           </div>
-          <div>
-            <div>
-              <BiLocationPlus />
-              <p>{location}</p>
+          <div className="location-container">
+            <div className="lcs-1">
+              <BiLocationPlus className="lcsub-1" />
+              <p className="lcsub-2">{location}</p>
             </div>
-            <div>
-              <BsFillPersonFill />
-              <p>{employmentType}</p>
+            <div className="lcp-1">
+              <BsFillPersonFill className="lcpsub-1" />
+              <p className="lcpsub-2">{employmentType}</p>
             </div>
-            <p>{packagePerAnnum}</p>
+            <p className="package-per-year">{packagePerAnnum}</p>
           </div>
-          <hr />
-          <div>
-            <h1>Description</h1>
-            <a href={companyWebsiteUrl}>
+          <hr className="horizontal-line" />
+          <div className="description-container">
+            <h1 className="dc-1">Description</h1>
+            <a href={companyWebsiteUrl} className="dc-2">
               Visit
               <span>
                 <FiExternalLink />
               </span>
             </a>
           </div>
-          <p>{jobDescription}</p>
-          <h1>Skills</h1>
-          {skills.map(skill => (
-            <div key={skill.name}>
-              <img src={skill.imageUrl} alt={skill.name} />
-              <p>{skill.name}</p>
-            </div>
-          ))}
-          <h1>Life at Company</h1>
-          <div>
-            <p>{description}</p>
-            <img src={imageUrl} alt="company" />
+          <p className="jd-1">{jobDescription}</p>
+          <h1 className="skill-heading">Skills</h1>
+          <ul className="facebook-ul-list">
+            {skills.map(skill => (
+              <li key={skill.name} className="ful-1">
+                <img
+                  src={skill.imageUrl}
+                  alt={skill.name}
+                  className="ful-image"
+                />
+                <p className="ful-2">{skill.name}</p>
+              </li>
+            ))}
+          </ul>
+          <h1 className="lac">Life at Company</h1>
+          <div className="lac-1">
+            <p className="lac-2">{description}</p>
+            <img src={imageUrl} alt="company" className="lac-3" />
           </div>
         </div>
         <div>
-          <h1>Similar Jobs</h1>
-          <ul>
+          <h1 className="sj">Similar Jobs</h1>
+          <ul className="sj-1">
             {similarJobs.map(jobby => (
               <SimilarJob key={jobby.id} jobDoc={jobby} />
             ))}
