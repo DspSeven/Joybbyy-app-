@@ -24,7 +24,7 @@ const Header = props => {
           </Link>
         </li>
         <li>
-          <Link to="/job">
+          <Link to="/jobs">
             <h1 className="job-heading">Jobs</h1>
           </Link>
         </li>
